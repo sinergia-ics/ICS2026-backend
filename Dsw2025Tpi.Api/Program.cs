@@ -22,6 +22,25 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        var connectionString = builder.Configuration["DB_CONNECTION_STRING"]
+            ?? builder.Configuration.GetConnectionString("Dsw2025TpiEntities")
+            ?? builder.Configuration.GetConnectionString("DB_CONNECTION_STRING")
+            ?? throw new InvalidOperationException(
+                "No se configuró la connection string. Definí la app setting 'DB_CONNECTION_STRING' o 'ConnectionStrings__Dsw2025TpiEntities'.");
+
+        if (!OperatingSystem.IsWindows() && connectionString.Contains("(localdb)", StringComparison.OrdinalIgnoreCase))
+        {
+            throw new InvalidOperationException(
+                "La connection string apunta a LocalDB, que no está disponible en este sistema. " +
+                "Configurá en el App Service una app setting 'DB_CONNECTION_STRING' con la cadena ADO.NET de tu SQL de Azure.");
+        }
+
+        var serverPart = connectionString
+            .Split(';')
+            .FirstOrDefault(x => x.TrimStart().StartsWith("Server=", StringComparison.OrdinalIgnoreCase)
+                              || x.TrimStart().StartsWith("Data Source=", StringComparison.OrdinalIgnoreCase));
+        Console.WriteLine($"Conectando a base de datos: {serverPart}");
+
         // Add services to the container.
         builder.Services.AddLogging(config =>
         {
@@ -77,7 +96,7 @@ public class Program
 
         builder.Services.AddDbContext<AuthenticateContext>(options =>
         {
-            options.UseSqlServer(builder.Configuration.GetConnectionString("Dsw2025TpiEntities"));
+            options.UseSqlServer(connectionString);
         });
 
         // --- AQU� EST� EL CAMBIO ---
@@ -121,7 +140,7 @@ public class Program
 
         builder.Services.AddDbContext<Dsw2025TpiContext>(options =>
         {
-            options.UseSqlServer(builder.Configuration.GetConnectionString("Dsw2025TpiEntities"));
+            options.UseSqlServer(connectionString);
         });
 
         builder.Services.AddSingleton<JwtTokenService>();
@@ -241,11 +260,8 @@ public class Program
             }
         }
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
         if (app.Environment.IsDevelopment())
         {

@@ -2,33 +2,43 @@ name: Build and Deploy to Azure App Service (Publish Profile)
 
 on:
   push:
-    branches: [ development, main ]
-    paths:
-      - 'Dsw2025Tpi/**'
+    branches: [development, main]
   pull_request:
-    branches: [ development, main ]
-    paths:
-      - 'Dsw2025Tpi/**'
+    branches: [development, main]
   workflow_dispatch:
+
+env:
+  REGISTRY: ${{ secrets.ACR_NAME }}.azurecr.io
+  IMAGE_NAME: dsw2025tpi-api
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout del código
-      uses: actions/checkout@v4
-    - name: Configurar SDK de .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-    - name: Compilar y Publicar API
-      run: |
-        dotnet restore Dsw2025Tpi
-        dotnet publish Dsw2025Tpi -c Release -o ./publish
-    - name: Deploy to Azure App Service
-      if: github.event_name != 'pull_request'
-      uses: azure/webapps-deploy@v3
-      with:
-        app-name: ${{ secrets.APP_SERVICE_NAME }}
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: './publish'
+      - name: 1. Obtener el código
+        uses: actions/checkout@v4
+      - name: 2. Iniciar sesión en Azure Container Registry (ACR)
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+      - name: 3. Construir la imagen Docker (.NET 8)
+        run: |
+          docker build \
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
+            -f Dockerfile \
+            .
+      - name: 4. Subir la imagen a ACR
+        if: github.event_name != 'pull_request'
+        run: |
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      - name: 5. Desplegar el contenedor en Azure App Service
+        if: github.event_name != 'pull_request'
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.APP_SERVICE_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
