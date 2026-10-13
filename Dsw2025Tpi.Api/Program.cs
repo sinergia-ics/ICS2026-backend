@@ -260,8 +260,11 @@ public class Program
             }
         }
         // Configure the HTTP request pipeline.
-        app.UseSwagger();
-        app.UseSwaggerUI();
+if (app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("EnableSwagger"))
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
         if (app.Environment.IsDevelopment())
         {
