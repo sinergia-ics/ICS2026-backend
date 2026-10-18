@@ -1,4 +1,4 @@
-name: Build and Deploy to Azure App Service (Publish Profile)
+name: CI/CD - Build and Deploy to Azure App Service
 
 on:
   push:
@@ -10,32 +10,61 @@ on:
 env:
   REGISTRY: ${{ secrets.ACR_NAME }}.azurecr.io
   IMAGE_NAME: dsw2025tpi-api
+  DOTNET_VERSION: '8.0.x'
 
 jobs:
-  build-and-deploy:
+  build:
+    name: Restaurar y compilar
     runs-on: ubuntu-latest
     steps:
-      - name: 1. Obtener el código
+      - name: Obtener el código
         uses: actions/checkout@v4
-      - name: 2. Iniciar sesión en Azure Container Registry (ACR)
+
+      - name: Instalar .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restaurar paquetes
+        run: dotnet restore
+
+      - name: Limpiar
+        run: dotnet clean
+
+      - name: Compilar
+        run: dotnet build --no-restore --configuration Release
+
+  build-and-deploy:
+    name: Construir imagen y desplegar
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el código
+        uses: actions/checkout@v4
+
+      - name: Iniciar sesión en Azure Container Registry (ACR)
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
-      - name: 3. Construir la imagen Docker (.NET 8)
+
+      - name: Construir la imagen Docker (.NET 8)
         run: |
           docker build \
             -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
             -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
             -f Dockerfile \
             .
-      - name: 4. Subir la imagen a ACR
+
+      - name: Subir la imagen a ACR
         if: github.event_name != 'pull_request'
         run: |
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-      - name: 5. Desplegar el contenedor en Azure App Service
+
+      - name: Desplegar el contenedor en Azure App Service
         if: github.event_name != 'pull_request'
         uses: azure/webapps-deploy@v3
         with:
