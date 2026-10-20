@@ -259,7 +259,6 @@ public class Program
                 Console.WriteLine(ex.ToString());
             }
         }
-        // Configure the HTTP request pipeline.
         app.UseSwagger();
         app.UseSwaggerUI();
 
@@ -267,6 +266,7 @@ public class Program
         {
             app.UseHttpsRedirection();
         }
+
         app.UseCors("AllowFrontend");
 
         app.UseMiddleware<ExceptionHandlingMiddleware>();
