@@ -1,34 +1,68 @@
-name: Build and Deploy to Azure App Service (Publish Profile)
+name: CI/CD - Build and Deploy to Azure App Service
 
 on:
   push:
-    branches: [ development, main ]
-    paths:
-      - 'Dsw2025Tpi/**'
+    branches: [development, main]
   pull_request:
-    branches: [ development, main ]
-    paths:
-      - 'Dsw2025Tpi/**'
+    branches: [development, main]
   workflow_dispatch:
 
+env:
+  IMAGE_NAME: ics-backend
+  DOTNET_VERSION: '8.0.x'
+
 jobs:
-  build-and-deploy:
+  build:
+    name: Restaurar y compilar
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout del código
-      uses: actions/checkout@v4
-    - name: Configurar SDK de .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-    - name: Compilar y Publicar API
-      run: |
-        dotnet restore Dsw2025Tpi
-        dotnet publish Dsw2025Tpi -c Release -o ./publish
-    - name: Deploy to Azure App Service
-      if: github.event_name != 'pull_request'
-      uses: azure/webapps-deploy@v3
-      with:
-        app-name: ${{ secrets.APP_SERVICE_NAME }}
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: './publish'
+      - name: Obtener el código
+        uses: actions/checkout@v4
+
+      - name: Instalar .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restaurar paquetes
+        run: dotnet restore
+
+      - name: Limpiar
+        run: dotnet clean
+
+      - name: Compilar
+        run: dotnet build --no-restore --configuration Release
+
+  build-and-deploy:
+    name: Construir imagen y desplegar
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el código
+        uses: actions/checkout@v4
+
+      - name: Iniciar sesión en Docker Hub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Construir la imagen Docker (.NET 8)
+        run: |
+          docker build \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest \
+            -f Dockerfile \
+            .
+
+      - name: Subir la imagen a Docker Hub
+        if: github.event_name != 'pull_request'
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+
+      - name: Desplegar el contenedor en Azure App Service
+        if: github.event_name != 'pull_request'
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.APP_SERVICE_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
