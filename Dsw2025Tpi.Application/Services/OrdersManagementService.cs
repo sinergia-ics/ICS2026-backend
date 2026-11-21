@@ -124,18 +124,20 @@ public class OrdersManagementService
         if (customer == null) throw new CustomerNotFoundException(request.CustomerId);
 
         var orderItems = new List<OrderItem>();
+        var reservations = new Dictionary<Guid, (Product Product, int Quantity)>();
         decimal total = 0m;
 
         foreach (var item in request.Items)
         {
             if (item.Quantity <= 0) throw new InvalidOrderDataException($"Cantidad inválida para producto {item.ProductId}");
 
-            var product = await _repository.GetById<Product>(item.ProductId);
+            var product = reservations.TryGetValue(item.ProductId, out var reserved)
+                ? reserved.Product
+                : await _repository.GetById<Product>(item.ProductId);
             if (product == null || !product.IsActive) throw new ArgumentException($"Producto {item.ProductId} no disponible.");
-            if (product.StockQuantity < item.Quantity) throw new InsufficientStockException(product.Name, product.StockQuantity, item.Quantity);
-
-            product.StockQuantity -= item.Quantity;
-            await _repository.Update(product);
+            var quantity = checked(reserved.Quantity + item.Quantity);
+            if (product.StockQuantity < quantity) throw new InsufficientStockException(product.Name, product.StockQuantity, quantity);
+            reservations[item.ProductId] = (product, quantity);
 
             var orderItem = new OrderItem(Guid.Empty, product.Id, item.Quantity, product.CurrentUnitPrice);
             orderItem.Product = product; // Asignamos para tener el nombre en la respuesta inmediata
@@ -150,7 +152,16 @@ public class OrdersManagementService
             OrderItems = orderItems
         };
 
-        await _repository.Add(order);
+        // Validar todos los ítems antes de modificar stock; confirmar inventario y orden juntos.
+        await _repository.ExecuteInTransaction(async () =>
+        {
+            foreach (var reservation in reservations.Values)
+            {
+                reservation.Product.StockQuantity -= reservation.Quantity;
+                await _repository.Update(reservation.Product);
+            }
+            await _repository.Add(order);
+        });
 
         return new OrderResponse(
             order.Id,

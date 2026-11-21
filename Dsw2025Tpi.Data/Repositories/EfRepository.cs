@@ -9,6 +9,27 @@ namespace Dsw2025Tpi.Data.Repositories;
 
 public class EfRepository : IRepository
 {
+    /// <inheritdoc />
+    public async Task ExecuteInTransaction(Func<Task> operation)
+    {
+        ArgumentNullException.ThrowIfNull(operation);
+        var strategy = _context.Database.CreateExecutionStrategy();
+        await strategy.ExecuteAsync(async () =>
+        {
+            await using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                await operation();
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                _context.ChangeTracker.Clear();
+                throw;
+            }
+        });
+    }
    
     private readonly Dsw2025TpiContext _context;
 

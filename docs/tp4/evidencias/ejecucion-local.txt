@@ -1,0 +1,31 @@
+  Dsw2025Tpi.Domain -> D:\ics\ICS2026-backend\Dsw2025Tpi.Domain\bin\Release\net8.0\Dsw2025Tpi.Domain.dll
+  Dsw2025Tpi.Application -> D:\ics\ICS2026-backend\Dsw2025Tpi.Application\bin\Release\net8.0\Dsw2025Tpi.Application.dll
+  ECommerce.UnitTests -> D:\ics\ICS2026-backend\tests\ECommerce.UnitTests\bin\Release\net8.0\ECommerce.UnitTests.dll
+Test run for D:\ics\ICS2026-backend\tests\ECommerce.UnitTests\bin\Release\net8.0\ECommerce.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.2 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Results File: D:\ics\tp4-qa\verified-results\lgluc_GABRIEL_2026-11-21_15_25_37.trx
+
+Passed!  - Failed:     0, Passed:    24, Skipped:     0, Total:    24, Duration: 110 ms - ECommerce.UnitTests.dll (net8.0)
+  Dsw2025Tpi.Data -> D:\ics\ICS2026-backend\Dsw2025Tpi.Data\bin\Release\net8.0\Dsw2025Tpi.Data.dll
+D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Configurations\SpanishIdentityErrorDescriber.cs(30,35): warning CS8765: Nullability of type of parameter 'userName' doesn't match overridden member (possibly because of nullability attributes). [D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Dsw2025Tpi.Api.csproj]
+D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Configurations\SpanishIdentityErrorDescriber.cs(35,35): warning CS8765: Nullability of type of parameter 'email' doesn't match overridden member (possibly because of nullability attributes). [D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Dsw2025Tpi.Api.csproj]
+D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Configurations\SpanishIdentityErrorDescriber.cs(50,35): warning CS8765: Nullability of type of parameter 'role' doesn't match overridden member (possibly because of nullability attributes). [D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Dsw2025Tpi.Api.csproj]
+D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Controllers\AuthenticateController.cs(51,35): warning CS8600: Converting null literal or possible null value to non-nullable type. [D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Dsw2025Tpi.Api.csproj]
+D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Controllers\AuthenticateController.cs(61,36): warning CS8600: Converting null literal or possible null value to non-nullable type. [D:\ics\ICS2026-backend\Dsw2025Tpi.Api\Dsw2025Tpi.Api.csproj]
+  Dsw2025Tpi.Api -> D:\ics\ICS2026-backend\Dsw2025Tpi.Api\bin\Release\net8.0\Dsw2025Tpi.Api.dll
+  ECommerce.IntegrationTests -> D:\ics\ICS2026-backend\tests\ECommerce.IntegrationTests\bin\Release\net8.0\ECommerce.IntegrationTests.dll
+Test run for D:\ics\ICS2026-backend\tests\ECommerce.IntegrationTests\bin\Release\net8.0\ECommerce.IntegrationTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.2 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Results File: D:\ics\tp4-qa\verified-results\lgluc_GABRIEL_2026-11-21_15_25_48.trx
+
+Passed!  - Failed:     0, Passed:    15, Skipped:     0, Total:    15, Duration: 4 s - ECommerce.IntegrationTests.dll (net8.0)
+
+Attachments:
+  D:\ics\tp4-qa\verified-results\4ebb5d8d-eecf-4f0c-b881-0e5e70e10d90\coverage.cobertura.xml
+  D:\ics\tp4-qa\verified-results\c3740dc0-351b-424c-bdfa-020456f064a6\coverage.cobertura.xml

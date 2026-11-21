@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b21836f0-63e5-4c52-b683-c12a13813183" name="@runnervm0hi8g 2026-11-21 18:27:15" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-21T18:27:15.4076458+00:00" queuing="2026-11-21T18:27:15.4076459+00:00" start="2026-11-21T18:27:07.7739682+00:00" finish="2026-11-21T18:27:18.9520480+00:00" />
+  <TestSettings name="default" id="908c4131-3698-46c3-8fc9-adb69462193c">
+    <Deployment runDeploymentRoot="_runnervm0hi8g_2026-11-21_18_27_15" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f591a924-adcd-478b-aa6f-9f6589580640" testId="51b16716-98c8-34b7-46e6-683b25219f63" testName="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenStockIsInsufficient_ReturnsBadRequestWithErrorMessage" computerName="runnervm0hi8g" duration="00:00:00.1220417" startTime="2026-11-21T18:27:16.5241533+00:00" endTime="2026-11-21T18:27:16.5241537+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f591a924-adcd-478b-aa6f-9f6589580640" />
+    <UnitTestResult executionId="0c93ed11-adb3-46f9-bf0b-a197eccca4f3" testId="327c4bda-89b9-d994-b415-7930e2ef0b60" testName="ECommerce.IntegrationTests.ApiTests.GetAuthProducts_AdminEndpoint_WhenCalledByAdmin_IncludesInactiveProducts" computerName="runnervm0hi8g" duration="00:00:00.0845743" startTime="2026-11-21T18:27:16.2633053+00:00" endTime="2026-11-21T18:27:16.2633056+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c93ed11-adb3-46f9-bf0b-a197eccca4f3" />
+    <UnitTestResult executionId="180c07c1-7bbb-4a70-b353-eaa16e2666c8" testId="e328cbbb-10d2-ffb2-dee0-446216ffbae5" testName="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenUnauthenticated_ReturnsUnauthorized" computerName="runnervm0hi8g" duration="00:00:00.0032004" startTime="2026-11-21T18:27:18.0554421+00:00" endTime="2026-11-21T18:27:18.0554425+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="180c07c1-7bbb-4a70-b353-eaa16e2666c8" />
+    <UnitTestResult executionId="d84eab86-3226-46b9-8a48-33dc44d38485" testId="93e070c7-2e71-b837-c3ea-eeb0cbc51a0c" testName="ECommerce.IntegrationTests.ApiTests.Repository_WhenOrderInsertFails_RollsBackPreviouslySavedStock" computerName="runnervm0hi8g" duration="00:00:00.0292236" startTime="2026-11-21T18:27:17.9189466+00:00" endTime="2026-11-21T18:27:17.9189470+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d84eab86-3226-46b9-8a48-33dc44d38485" />
+    <UnitTestResult executionId="8cf53902-7f72-4dd7-b5a7-90463ec9d8d6" testId="e45137c6-720a-ff80-7753-6270163b12d0" testName="ECommerce.IntegrationTests.ApiTests.GetProducts_WhenDatabaseIsEmpty_ReturnsNoContent" computerName="runnervm0hi8g" duration="00:00:00.0130259" startTime="2026-11-21T18:27:16.0419655+00:00" endTime="2026-11-21T18:27:16.0419658+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8cf53902-7f72-4dd7-b5a7-90463ec9d8d6" />
+    <UnitTestResult executionId="d450f83e-44d1-48be-80a6-81f1862ee95b" testId="57f0ae91-fdd5-76e7-19c6-4d19e2cf18f3" testName="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenAuthenticatedWithValidData_ReturnsCreatedAndPersistsOrderAndStockInSqlite" computerName="runnervm0hi8g" duration="00:00:00.0928210" startTime="2026-11-21T18:27:18.4215431+00:00" endTime="2026-11-21T18:27:18.4215435+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d450f83e-44d1-48be-80a6-81f1862ee95b" />
+    <UnitTestResult executionId="5197bf03-98d4-4890-8d45-c7e1f215ae36" testId="1239d709-84cd-d421-7ea9-c31d06cdf5c6" testName="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden(username: null, expected: Unauthorized)" computerName="runnervm0hi8g" duration="00:00:00.0063447" startTime="2026-11-21T18:27:16.8568458+00:00" endTime="2026-11-21T18:27:16.8568461+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5197bf03-98d4-4890-8d45-c7e1f215ae36" />
+    <UnitTestResult executionId="d8e4bef3-f4e3-4ce3-8b4d-86227189d161" testId="57585c41-495a-1df3-5a82-9f63f64767b0" testName="ECommerce.IntegrationTests.ApiTests.GetProducts_WithQueryStringFilters_ReturnsFilteredResultsFromSqlite" computerName="runnervm0hi8g" duration="00:00:00.1018973" startTime="2026-11-21T18:27:15.6332804+00:00" endTime="2026-11-21T18:27:15.6332807+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8e4bef3-f4e3-4ce3-8b4d-86227189d161" />
+    <UnitTestResult executionId="b5740293-f7b0-4955-890c-9da1c48d393f" testId="b40a2397-3c3d-a25d-934c-b9b630f38609" testName="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenAuthenticatedAsAdmin_PersistsInSqliteAndReturnsCreated" computerName="runnervm0hi8g" duration="00:00:00.1353011" startTime="2026-11-21T18:27:17.1209011+00:00" endTime="2026-11-21T18:27:17.1209015+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5740293-f7b0-4955-890c-9da1c48d393f" />
+    <UnitTestResult executionId="477fadf5-8a9c-41e2-8421-abdd0216d16d" testId="5fe2b2c5-1bab-e3e5-a2ef-8e7b00105604" testName="ECommerce.IntegrationTests.ApiTests.E2E_LoginCreateProductPurchaseAndReadOrder_PreservesInventoryAndTotals" computerName="runnervm0hi8g" duration="00:00:00.2897545" startTime="2026-11-21T18:27:17.5456246+00:00" endTime="2026-11-21T18:27:17.5456249+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="477fadf5-8a9c-41e2-8421-abdd0216d16d" />
+    <UnitTestResult executionId="fe8d087e-4591-47d7-a16e-8d01f69c13e6" testId="32d19393-8d4c-5c01-e833-b0baaa6883aa" testName="ECommerce.IntegrationTests.ApiTests.GetProducts_PublicEndpoint_ReturnsOkWithPaginatedJsonStructure" computerName="runnervm0hi8g" duration="00:00:00.0068503" startTime="2026-11-21T18:27:18.1955428+00:00" endTime="2026-11-21T18:27:18.1955433+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe8d087e-4591-47d7-a16e-8d01f69c13e6" />
+    <UnitTestResult executionId="a198319c-64f4-41b8-ab2c-13bbbfd35722" testId="09848c39-ff58-4741-244a-7760ae08b0ba" testName="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenLaterItemFails_DoesNotPersistPartialStockChanges" computerName="runnervm0hi8g" duration="00:00:00.0798735" startTime="2026-11-21T18:27:17.7564033+00:00" endTime="2026-11-21T18:27:17.7564037+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a198319c-64f4-41b8-ab2c-13bbbfd35722" />
+    <UnitTestResult executionId="33437d14-c966-44b4-b7c1-9d6e7846e641" testId="8ea99eaf-3ed3-0939-be88-12962e2e4e8b" testName="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenSkuAlreadyExistsInDatabase_ReturnsConflictStatusCode" computerName="runnervm0hi8g" duration="00:00:00.1178194" startTime="2026-11-21T18:27:15.8975885+00:00" endTime="2026-11-21T18:27:15.8975890+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33437d14-c966-44b4-b7c1-9d6e7846e641" />
+    <UnitTestResult executionId="20a5fa2e-8e07-4429-994b-7948fa9d93ed" testId="829a69d5-4bf4-e639-456c-e2b95dd101dc" testName="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden(username: &quot;user&quot;, expected: Forbidden)" computerName="runnervm0hi8g" duration="00:00:00.0645932" startTime="2026-11-21T18:27:16.7203168+00:00" endTime="2026-11-21T18:27:16.7203172+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20a5fa2e-8e07-4429-994b-7948fa9d93ed" />
+    <UnitTestResult executionId="cf5dd3b0-fd51-4c79-8dea-cf3671f21798" testId="dc15b074-ec25-9745-458b-cf4d06bb86c3" testName="ECommerce.IntegrationTests.ApiTests.ProtectedEndpoint_WithTamperedJwt_ReturnsUnauthorized" computerName="runnervm0hi8g" duration="00:00:00.4441591" startTime="2026-11-21T18:27:15.3737322+00:00" endTime="2026-11-21T18:27:15.3737861+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf5dd3b0-fd51-4c79-8dea-cf3671f21798" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.ProtectedEndpoint_WithTamperedJwt_ReturnsUnauthorized" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="dc15b074-ec25-9745-458b-cf4d06bb86c3">
+      <Execution id="cf5dd3b0-fd51-4c79-8dea-cf3671f21798" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="ProtectedEndpoint_WithTamperedJwt_ReturnsUnauthorized" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenSkuAlreadyExistsInDatabase_ReturnsConflictStatusCode" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="8ea99eaf-3ed3-0939-be88-12962e2e4e8b">
+      <Execution id="33437d14-c966-44b4-b7c1-9d6e7846e641" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="AddProduct_WhenSkuAlreadyExistsInDatabase_ReturnsConflictStatusCode" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenAuthenticatedAsAdmin_PersistsInSqliteAndReturnsCreated" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="b40a2397-3c3d-a25d-934c-b9b630f38609">
+      <Execution id="b5740293-f7b0-4955-890c-9da1c48d393f" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="AddProduct_WhenAuthenticatedAsAdmin_PersistsInSqliteAndReturnsCreated" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.Repository_WhenOrderInsertFails_RollsBackPreviouslySavedStock" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="93e070c7-2e71-b837-c3ea-eeb0cbc51a0c">
+      <Execution id="d84eab86-3226-46b9-8a48-33dc44d38485" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="Repository_WhenOrderInsertFails_RollsBackPreviouslySavedStock" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.E2E_LoginCreateProductPurchaseAndReadOrder_PreservesInventoryAndTotals" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="5fe2b2c5-1bab-e3e5-a2ef-8e7b00105604">
+      <Execution id="477fadf5-8a9c-41e2-8421-abdd0216d16d" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="E2E_LoginCreateProductPurchaseAndReadOrder_PreservesInventoryAndTotals" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden(username: &quot;user&quot;, expected: Forbidden)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="829a69d5-4bf4-e639-456c-e2b95dd101dc">
+      <Execution id="20a5fa2e-8e07-4429-994b-7948fa9d93ed" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.GetProducts_WithQueryStringFilters_ReturnsFilteredResultsFromSqlite" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="57585c41-495a-1df3-5a82-9f63f64767b0">
+      <Execution id="d8e4bef3-f4e3-4ce3-8b4d-86227189d161" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="GetProducts_WithQueryStringFilters_ReturnsFilteredResultsFromSqlite" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden(username: null, expected: Unauthorized)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="1239d709-84cd-d421-7ea9-c31d06cdf5c6">
+      <Execution id="5197bf03-98d4-4890-8d45-c7e1f215ae36" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenUnauthenticated_ReturnsUnauthorized" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="e328cbbb-10d2-ffb2-dee0-446216ffbae5">
+      <Execution id="180c07c1-7bbb-4a70-b353-eaa16e2666c8" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="CreateOrder_WhenUnauthenticated_ReturnsUnauthorized" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenStockIsInsufficient_ReturnsBadRequestWithErrorMessage" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="51b16716-98c8-34b7-46e6-683b25219f63">
+      <Execution id="f591a924-adcd-478b-aa6f-9f6589580640" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="CreateOrder_WhenStockIsInsufficient_ReturnsBadRequestWithErrorMessage" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.GetProducts_WhenDatabaseIsEmpty_ReturnsNoContent" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="e45137c6-720a-ff80-7753-6270163b12d0">
+      <Execution id="8cf53902-7f72-4dd7-b5a7-90463ec9d8d6" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="GetProducts_WhenDatabaseIsEmpty_ReturnsNoContent" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenAuthenticatedWithValidData_ReturnsCreatedAndPersistsOrderAndStockInSqlite" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="57f0ae91-fdd5-76e7-19c6-4d19e2cf18f3">
+      <Execution id="d450f83e-44d1-48be-80a6-81f1862ee95b" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="CreateOrder_WhenAuthenticatedWithValidData_ReturnsCreatedAndPersistsOrderAndStockInSqlite" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenLaterItemFails_DoesNotPersistPartialStockChanges" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="09848c39-ff58-4741-244a-7760ae08b0ba">
+      <Execution id="a198319c-64f4-41b8-ab2c-13bbbfd35722" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="CreateOrder_WhenLaterItemFails_DoesNotPersistPartialStockChanges" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.GetAuthProducts_AdminEndpoint_WhenCalledByAdmin_IncludesInactiveProducts" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="327c4bda-89b9-d994-b415-7930e2ef0b60">
+      <Execution id="0c93ed11-adb3-46f9-bf0b-a197eccca4f3" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="GetAuthProducts_AdminEndpoint_WhenCalledByAdmin_IncludesInactiveProducts" />
+    </UnitTest>
+    <UnitTest name="ECommerce.IntegrationTests.ApiTests.GetProducts_PublicEndpoint_ReturnsOkWithPaginatedJsonStructure" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.integrationtests/bin/release/net8.0/ecommerce.integrationtests.dll" id="32d19393-8d4c-5c01-e833-b0baaa6883aa">
+      <Execution id="fe8d087e-4591-47d7-a16e-8d01f69c13e6" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.IntegrationTests/bin/Release/net8.0/ECommerce.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.IntegrationTests.ApiTests" name="GetProducts_PublicEndpoint_ReturnsOkWithPaginatedJsonStructure" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="51b16716-98c8-34b7-46e6-683b25219f63" executionId="f591a924-adcd-478b-aa6f-9f6589580640" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="327c4bda-89b9-d994-b415-7930e2ef0b60" executionId="0c93ed11-adb3-46f9-bf0b-a197eccca4f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e328cbbb-10d2-ffb2-dee0-446216ffbae5" executionId="180c07c1-7bbb-4a70-b353-eaa16e2666c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="93e070c7-2e71-b837-c3ea-eeb0cbc51a0c" executionId="d84eab86-3226-46b9-8a48-33dc44d38485" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e45137c6-720a-ff80-7753-6270163b12d0" executionId="8cf53902-7f72-4dd7-b5a7-90463ec9d8d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57f0ae91-fdd5-76e7-19c6-4d19e2cf18f3" executionId="d450f83e-44d1-48be-80a6-81f1862ee95b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1239d709-84cd-d421-7ea9-c31d06cdf5c6" executionId="5197bf03-98d4-4890-8d45-c7e1f215ae36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57585c41-495a-1df3-5a82-9f63f64767b0" executionId="d8e4bef3-f4e3-4ce3-8b4d-86227189d161" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b40a2397-3c3d-a25d-934c-b9b630f38609" executionId="b5740293-f7b0-4955-890c-9da1c48d393f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fe2b2c5-1bab-e3e5-a2ef-8e7b00105604" executionId="477fadf5-8a9c-41e2-8421-abdd0216d16d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32d19393-8d4c-5c01-e833-b0baaa6883aa" executionId="fe8d087e-4591-47d7-a16e-8d01f69c13e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09848c39-ff58-4741-244a-7760ae08b0ba" executionId="a198319c-64f4-41b8-ab2c-13bbbfd35722" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ea99eaf-3ed3-0939-be88-12962e2e4e8b" executionId="33437d14-c966-44b4-b7c1-9d6e7846e641" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="829a69d5-4bf4-e639-456c-e2b95dd101dc" executionId="20a5fa2e-8e07-4429-994b-7948fa9d93ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc15b074-ec25-9745-458b-cf4d06bb86c3" executionId="cf5dd3b0-fd51-4c79-8dea-cf3671f21798" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.34)
+[xUnit.net 00:00:00.26]   Discovering: ECommerce.IntegrationTests
+[xUnit.net 00:00:00.38]   Discovered:  ECommerce.IntegrationTests
+[xUnit.net 00:00:00.39]   Starting:    ECommerce.IntegrationTests
+Conectando a base de datos: Data Source=(localdb)\MSSQLLocalDB
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {b938b15f-fb66-4b74-bbe6-b1fe93058e75} may be persisted to storage in unencrypted form.
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: admin con rol: Admin
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: admin
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products para obtener todos los productos.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Consulta de productos. IncludeInactive: False, StatusFilter: (null)
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: admin con rol: Admin
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: admin
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud POST /api/products para agregar un nuevo producto.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Intentando agregar un nuevo producto con SKU: SKU-1
+fail: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Intento de crear producto con SKU duplicado: SKU-1
+fail: Dsw2025Tpi.Api.NewFolder.ExceptionHandlingMiddleware[0]
+      Se capturó una excepción no controlada: DuplicatedEntityException
+      Dsw2025Tpi.Application.Exceptions.DuplicatedEntityException: Ya existe un producto con el mismo SKU SKU-1
+         at Dsw2025Tpi.Application.Services.ProductsManagementService.AddProduct(Request request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Application/Services/ProductsManagementService.cs:line 45
+         at Dsw2025Tpi.Api.Controllers.ProductsController.AddProduct(Request request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Api/Controllers/ProductsController.cs:line 75
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Dsw2025Tpi.Api.NewFolder.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Api/Middleware/ExceptionHandlingMiddleware.cs:line 23
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products para obtener todos los productos.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Consulta de productos. IncludeInactive: False, StatusFilter: (null)
+warn: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      No se encontraron productos activos.
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: admin con rol: Admin
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: admin
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Admin solicitando productos (incluyendo inactivos).
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Consulta de productos. IncludeInactive: True, StatusFilter: (null)
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products para obtener todos los productos.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Consulta de productos. IncludeInactive: False, StatusFilter: (null)
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: user con rol: User
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: user
+info: Dsw2025Tpi.Api.Controllers.OrdersController[0]
+      Recibida solicitud POST /api/orders para crear una nueva orden.
+info: Dsw2025Tpi.Application.Services.OrdersManagementService[0]
+      Creando orden para cliente ID: eaa4fa09-5c8f-47d8-a39a-1ecf5d543e31
+fail: Dsw2025Tpi.Api.NewFolder.ExceptionHandlingMiddleware[0]
+      Se capturó una excepción no controlada: InsufficientStockException
+      Dsw2025Tpi.Application.Exceptions.InsufficientStockException: El producto 'Mouse Gamer' no tiene suficiente stock. Stock actual: 10, solicitado: 20.
+         at Dsw2025Tpi.Application.Services.OrdersManagementService.CreateOrder(OrderRequest request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Application/Services/OrdersManagementService.cs:line 139
+         at Dsw2025Tpi.Api.Controllers.OrdersController.CreateOrder(OrderRequest request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Api/Controllers/OrdersController.cs:line 26
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Dsw2025Tpi.Api.NewFolder.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Api/Middleware/ExceptionHandlingMiddleware.cs:line 23
+warn: Dsw2025Tpi.Api.Controllers.AuthenticateController[0]
+      El usuario user@example.test existe en Identity pero no tiene registro en Customers.
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: user con rol: User
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: user
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: admin con rol: Admin
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: admin
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud POST /api/products para agregar un nuevo producto.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Intentando agregar un nuevo producto con SKU: SKU-1
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Producto con ID 5815a4d3-1fd8-4e18-b2ae-bb500e338359 y SKU SKU-1 creado exitosamente.
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products/5815a4d3-1fd8-4e18-b2ae-bb500e338359
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Buscando producto con ID: 5815a4d3-1fd8-4e18-b2ae-bb500e338359
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Se mostro el producto con ID: 5815a4d3-1fd8-4e18-b2ae-bb500e338359
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: admin con rol: Admin
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: admin
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: user con rol: User
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: user
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud POST /api/products para agregar un nuevo producto.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Intentando agregar un nuevo producto con SKU: E2E-1
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Producto con ID dca88369-de18-4aa3-a770-c6819d8fee84 y SKU E2E-1 creado exitosamente.
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products para obtener todos los productos.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Consulta de productos. IncludeInactive: False, StatusFilter: (null)
+info: Dsw2025Tpi.Api.Controllers.OrdersController[0]
+      Recibida solicitud POST /api/orders para crear una nueva orden.
+info: Dsw2025Tpi.Application.Services.OrdersManagementService[0]
+      Creando orden para cliente ID: 46291d4c-2438-4d48-98db-7db49e4b9fe8
+info: Dsw2025Tpi.Api.Controllers.OrdersController[0]
+      Recibida solicitud GET /api/orders/36f81c3a-4672-4da3-9fb9-58b24bc0e7b7
+info: Dsw2025Tpi.Application.Services.OrdersManagementService[0]
+      Buscando orden con ID: 36f81c3a-4672-4da3-9fb9-58b24bc0e7b7
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products/dca88369-de18-4aa3-a770-c6819d8fee84
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Buscando producto con ID: dca88369-de18-4aa3-a770-c6819d8fee84
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Se mostro el producto con ID: dca88369-de18-4aa3-a770-c6819d8fee84
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: user con rol: User
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: user
+info: Dsw2025Tpi.Api.Controllers.OrdersController[0]
+      Recibida solicitud POST /api/orders para crear una nueva orden.
+info: Dsw2025Tpi.Application.Services.OrdersManagementService[0]
+      Creando orden para cliente ID: afca4d17-14f1-41ba-9c93-835558fb3280
+fail: Dsw2025Tpi.Api.NewFolder.ExceptionHandlingMiddleware[0]
+      Se capturó una excepción no controlada: InsufficientStockException
+      Dsw2025Tpi.Application.Exceptions.InsufficientStockException: El producto 'Mouse Gamer' no tiene suficiente stock. Stock actual: 10, solicitado: 99.
+         at Dsw2025Tpi.Application.Services.OrdersManagementService.CreateOrder(OrderRequest request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Application/Services/OrdersManagementService.cs:line 139
+         at Dsw2025Tpi.Api.Controllers.OrdersController.CreateOrder(OrderRequest request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Api/Controllers/OrdersController.cs:line 26
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Dsw2025Tpi.Api.NewFolder.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Api/Middleware/ExceptionHandlingMiddleware.cs:line 23
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 7), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?', @p5='?' (Size = 5), @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Orders" ("Id", "BillingAddress", "CustomerId", "Date", "Notes", "ShippingAddress", "Status", "TotalAmount")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'Dsw2025Tpi.Data.Dsw2025TpiContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+info: Dsw2025Tpi.Api.Controllers.ProductsController[0]
+      Recibida solicitud GET /api/products para obtener todos los productos.
+info: Dsw2025Tpi.Application.Services.ProductsManagementService[0]
+      Consulta de productos. IncludeInactive: False, StatusFilter: (null)
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Generando token JWT para el usuario: user con rol: User
+info: Dsw2025Tpi.Application.Services.JwtTokenService[0]
+      Token generado con exito para el usuario: user
+info: Dsw2025Tpi.Api.Controllers.OrdersController[0]
+      Recibida solicitud POST /api/orders para crear una nueva orden.
+info: Dsw2025Tpi.Application.Services.OrdersManagementService[0]
+      Creando orden para cliente ID: 55a23d1c-720d-41d4-a677-795f6f8b55d1
+info: Dsw2025Tpi.Api.Controllers.OrdersController[0]
+      Recibida solicitud GET /api/orders/151b7c18-8398-48dd-b2d8-e2629ff3a359
+info: Dsw2025Tpi.Application.Services.OrdersManagementService[0]
+      Buscando orden con ID: 151b7c18-8398-48dd-b2d8-e2629ff3a359
+[xUnit.net 00:00:07.50]   Finished:    ECommerce.IntegrationTests
+</StdOut>
+    </Output>
+    <CollectorDataEntries>
+      <Collector agentName="runnervm0hi8g" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="runnervm0hi8g/coverage.cobertura.xml"></A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+  </ResultSummary>
+</TestRun>

@@ -1,68 +1,94 @@
-name: CI/CD - Build and Deploy to Azure App Service
+name: CI/CD - Tests, Docker and Azure
 
 on:
   push:
-    branches: [development, main]
+    branches: [development, main, 'test/**', 'feature/tp4-*']
   pull_request:
     branches: [development, main]
   workflow_dispatch:
+    inputs:
+      demonstrate_failure:
+        description: 'Inyectar una regresión temporal de stock para demostrar el bloqueo del deploy'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tp4-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   IMAGE_NAME: ics-backend
   DOTNET_VERSION: '8.0.x'
 
 jobs:
-  build:
-    name: Restaurar y compilar
+  run-tests:
+    name: Quality Gate - unitarias, integración y E2E API
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Obtener el código
-        uses: actions/checkout@v4
-
-      - name: Instalar .NET
-        uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
-
-      - name: Restaurar paquetes
-        run: dotnet restore
-
-      - name: Limpiar
-        run: dotnet clean
-
+      - name: Inyectar regresión sólo para la demostración manual
+        if: github.event_name == 'workflow_dispatch' && inputs.demonstrate_failure
+        shell: python
+        run: |
+          from pathlib import Path
+          path = Path('Dsw2025Tpi.Application/Services/ProductsManagementService.cs')
+          source = path.read_text(encoding='utf-8')
+          original = 'if (request.StockQuantity <= 0)'
+          assert original in source, 'No se encontró el punto de mutación'
+          path.write_text(source.replace(original, 'if (request.StockQuantity < 0)', 1), encoding='utf-8')
+      - name: Restaurar
+        run: dotnet restore Dsw2025Tpi.sln
       - name: Compilar
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build Dsw2025Tpi.sln --no-restore --configuration Release
+      - name: Ejecutar todas las pruebas
+        run: dotnet test Dsw2025Tpi.sln --no-build --configuration Release --logger trx --results-directory TestResults --collect:"XPlat Code Coverage"
+      - name: Conservar resultados incluso ante fallos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ github.run_id }}
+          path: TestResults/
+          if-no-files-found: warn
+      - name: Informar el fallo en el resumen
+        if: failure()
+        run: echo '### Quality Gate fallido. Docker y despliegue quedan bloqueados por needs.' >> "$GITHUB_STEP_SUMMARY"
 
   build-and-deploy:
     name: Construir imagen y desplegar
-    needs: build
+    needs: run-tests
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Obtener el código
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+      - name: Construir imagen sin secretos
+        run: docker build -t tp4-backend:${{ github.sha }} -f Dockerfile .
       - name: Iniciar sesión en Docker Hub
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development')
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Construir la imagen Docker (.NET 8)
+      - name: Etiquetar y publicar la imagen validada
+        if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development')
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
-          docker build \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest \
-            -f Dockerfile \
-            .
-
-      - name: Subir la imagen a Docker Hub
-        if: github.event_name != 'pull_request'
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-
-      - name: Desplegar el contenedor en Azure App Service
-        if: github.event_name != 'pull_request'
+          IMAGE="$DOCKERHUB_USERNAME/$IMAGE_NAME"
+          docker tag tp4-backend:${{ github.sha }} "$IMAGE:${{ github.sha }}"
+          docker tag tp4-backend:${{ github.sha }} "$IMAGE:latest"
+          docker push "$IMAGE:${{ github.sha }}"
+          docker push "$IMAGE:latest"
+      - name: Desplegar en Azure la imagen identificada por commit
+        if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development')
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.APP_SERVICE_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}

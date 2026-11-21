@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="10c62827-f673-42aa-a903-e23c06963ed1" name="@runnervm0hi8g 2026-11-21 18:29:03" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-21T18:29:03.9052510+00:00" queuing="2026-11-21T18:29:03.9052511+00:00" start="2026-11-21T18:29:01.2689015+00:00" finish="2026-11-21T18:29:04.5616852+00:00" />
+  <TestSettings name="default" id="52b9c894-7860-4ffb-ae4b-cb9f7d3e704f">
+    <Deployment runDeploymentRoot="_runnervm0hi8g_2026-11-21_18_29_03" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="19b9f0a0-915e-4931-9417-68712e604b65" testId="ad2263ab-3cd2-0dd6-30e7-d7d6eee7e9ba" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithEmptyItems_RejectsBeforeRepository" computerName="runnervm0hi8g" duration="00:00:00.0012881" startTime="2026-11-21T18:29:03.7971401+00:00" endTime="2026-11-21T18:29:03.7971402+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19b9f0a0-915e-4931-9417-68712e604b65" />
+    <UnitTestResult executionId="ec81c90f-b4fd-4b9b-926a-f0dd9baeb50a" testId="9c8f0429-6ac8-73b9-75dd-a6e723e3b263" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: 0, size: 10)" computerName="runnervm0hi8g" duration="00:00:00.0007189" startTime="2026-11-21T18:29:03.8821294+00:00" endTime="2026-11-21T18:29:03.8821295+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec81c90f-b4fd-4b9b-926a-f0dd9baeb50a" />
+    <UnitTestResult executionId="6b309753-9534-4228-a1d4-4add7ca75e7a" testId="dc5f52ca-41c1-1811-5971-39bd61c63219" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: -1, size: 10)" computerName="runnervm0hi8g" duration="00:00:00.0016431" startTime="2026-11-21T18:29:03.8794785+00:00" endTime="2026-11-21T18:29:03.8794787+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b309753-9534-4228-a1d4-4add7ca75e7a" />
+    <UnitTestResult executionId="b3fde18b-d768-489e-8600-d2dbcb94e960" testId="f7b77ffe-7d83-7274-df23-871ddfcd45a6" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithZeroPrice_AcceptsBoundaryValue" computerName="runnervm0hi8g" duration="00:00:00.0018789" startTime="2026-11-21T18:29:04.0228287+00:00" endTime="2026-11-21T18:29:04.0228288+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3fde18b-d768-489e-8600-d2dbcb94e960" />
+    <UnitTestResult executionId="8b72987c-e085-403a-bc40-451d967cb592" testId="66c98b70-5b8d-4065-e1d8-74f8a357dffb" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithValidData_ReturnsProductAndCallsRepositoryAdd" computerName="runnervm0hi8g" duration="00:00:00.1124044" startTime="2026-11-21T18:29:03.8592366+00:00" endTime="2026-11-21T18:29:03.8592368+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b72987c-e085-403a-bc40-451d967cb592" />
+    <UnitTestResult executionId="d540b51c-3477-415a-8835-63dc573aa599" testId="6737cd7e-5d9d-e6e7-508a-4ff1565d6236" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 10, price: -0.01)" computerName="runnervm0hi8g" duration="00:00:00.0006612" startTime="2026-11-21T18:29:04.0222027+00:00" endTime="2026-11-21T18:29:04.0222028+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d540b51c-3477-415a-8835-63dc573aa599" />
+    <UnitTestResult executionId="01e4390c-4f51-4b6f-aaf9-5fdff56b8e70" testId="a8cd0030-5359-f5b2-a337-7948a2376e40" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: &quot;mouse&quot;, name: &quot;Mouse Gamer&quot;, sku: &quot;A&quot;, code: &quot;X&quot;)" computerName="runnervm0hi8g" duration="00:00:00.0156357" startTime="2026-11-21T18:29:03.8632496+00:00" endTime="2026-11-21T18:29:03.8632497+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01e4390c-4f51-4b6f-aaf9-5fdff56b8e70" />
+    <UnitTestResult executionId="7f1f0c4b-3233-49b1-b946-6207b589f19b" testId="3279d390-d19b-4143-2094-47b1da56c385" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenLaterItemHasInsufficientStock_DoesNotChangeEarlierProduct" computerName="runnervm0hi8g" duration="00:00:00.0139220" startTime="2026-11-21T18:29:03.7815130+00:00" endTime="2026-11-21T18:29:03.7815132+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f1f0c4b-3233-49b1-b946-6207b589f19b" />
+    <UnitTestResult executionId="e0b8f8dd-bde4-4e21-a75d-975aa99d8cb7" testId="ce2f16ea-6e26-16a9-cb0e-ce11fc85a4d9" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenProductStockIsInsufficient_ThrowsInsufficientStockException" computerName="runnervm0hi8g" duration="00:00:00.0094575" startTime="2026-11-21T18:29:03.8629248+00:00" endTime="2026-11-21T18:29:03.8629249+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0b8f8dd-bde4-4e21-a75d-975aa99d8cb7" />
+    <UnitTestResult executionId="3b1f72cf-a240-4cca-9f0d-879d458ad959" testId="3d33c01a-f09b-c2e6-9ba5-b464feac3dcb" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithInvalidQuantity_RejectsWithoutWrites(quantity: -1)" computerName="runnervm0hi8g" duration="00:00:00.0052723" startTime="2026-11-21T18:29:03.7965095+00:00" endTime="2026-11-21T18:29:03.7965098+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b1f72cf-a240-4cca-9f0d-879d458ad959" />
+    <UnitTestResult executionId="62aeaa05-ec80-4d70-a5e7-e7258c8b9e5a" testId="5f03d8ed-38ba-6590-cab4-056b6a02cc91" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WhenIncludeInactiveIsFalse_ReturnsOnlyActiveProducts" computerName="runnervm0hi8g" duration="00:00:00.0030452" startTime="2026-11-21T18:29:04.0234599+00:00" endTime="2026-11-21T18:29:04.0234601+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62aeaa05-ec80-4d70-a5e7-e7258c8b9e5a" />
+    <UnitTestResult executionId="0c7ea5ed-ebed-48b0-93b1-dcfa1d980cd0" testId="d4a9992f-a26f-4b6f-9304-ba4f44d5bba8" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: &quot;MoUsE&quot;, name: &quot;Teclado&quot;, sku: &quot;SKU-MOUSE&quot;, code: &quot;X&quot;)" computerName="runnervm0hi8g" duration="00:00:00.0019004" startTime="2026-11-21T18:29:03.8643953+00:00" endTime="2026-11-21T18:29:03.8643954+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c7ea5ed-ebed-48b0-93b1-dcfa1d980cd0" />
+    <UnitTestResult executionId="42776c83-6fc2-4564-8fbd-04d12451d9eb" testId="cf0d94b0-b3b2-558e-2e33-9d60587a1cbe" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithMissingNameOrSku_DoesNotAccessRepository(sku: &quot;&quot;, name: &quot;Mouse&quot;)" computerName="runnervm0hi8g" duration="00:00:00.0010785" startTime="2026-11-21T18:29:03.7615939+00:00" endTime="2026-11-21T18:29:03.7615941+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42776c83-6fc2-4564-8fbd-04d12451d9eb" />
+    <UnitTestResult executionId="02cc74fe-fb05-401e-be24-1b0ea550edc1" testId="9afdbb8f-cb66-8790-89ca-e6b0d329ee7b" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 0, price: 10)" computerName="runnervm0hi8g" duration="00:00:00.1253221" startTime="2026-11-21T18:29:04.0212506+00:00" endTime="2026-11-21T18:29:04.0212507+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02cc74fe-fb05-401e-be24-1b0ea550edc1">
+      <Output>
+        <ErrorInfo>
+          <Message>Expected a &lt;System.IO.InvalidDataException&gt; to be thrown, but found &lt;Moq.MockException&gt;:
+Moq.MockException: IRepository.First&lt;Product&gt;(p =&gt; (p.Sku.Trim() == value(Dsw2025Tpi.Application.Services.ProductsManagementService+&lt;&gt;c__DisplayClass3_0).request.Sku.Trim()), []) invocation failed with mock behavior Strict.&#xD;
+All invocations on the mock must have a corresponding setup.
+   at Moq.FailForStrictMock.Handle(Invocation invocation, Mock mock) in /_/src/Moq/Interception/InterceptionAspects.cs:line 182
+   at Moq.Mock.Moq.IInterceptor.Intercept(Invocation invocation) in /_/src/Moq/Interception/Mock.cs:line 27
+   at Moq.CastleProxyFactory.Interceptor.Intercept(IInvocation underlying) in /_/src/Moq/Interception/CastleProxyFactory.cs:line 107
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IRepositoryProxy.First[T](Expression`1 predicate, String[] include)
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.AddProduct(Request request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Application/Services/ProductsManagementService.cs:line 40
+   at FluentAssertions.Specialized.AsyncFunctionAssertions`2.InvokeWithInterceptionAsync(Func`1 action).</Message>
+          <StackTrace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Specialized.DelegateAssertionsBase`2.ThrowInternal[TException](Exception exception, String because, Object[] becauseArgs)
+   at FluentAssertions.Specialized.AsyncFunctionAssertions`2.ThrowAsync[TException](String because, Object[] becauseArgs)
+   at ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(Int32 stock, Decimal price) in /home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/ProductsManagementServiceTests.cs:line 59
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6eb0f106-9a2c-42c1-a8f3-568eee2649ab" testId="3be62401-f462-702c-2b1d-de428d8ee007" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithValidItemsAndStock_CalculatesTotalAndDecrementsProductStock" computerName="runnervm0hi8g" duration="00:00:00.0372679" startTime="2026-11-21T18:29:03.8600320+00:00" endTime="2026-11-21T18:29:03.8600321+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6eb0f106-9a2c-42c1-a8f3-568eee2649ab" />
+    <UnitTestResult executionId="e8e990de-cd66-4a5d-baed-76b7b90da6bc" testId="45df77c5-cf2d-3a71-af6e-17666d07673e" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenRepeatedProductExceedsCombinedStock_RejectsWithoutWrites" computerName="runnervm0hi8g" duration="00:00:00.2027199" startTime="2026-11-21T18:29:03.7690662+00:00" endTime="2026-11-21T18:29:03.7690664+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8e990de-cd66-4a5d-baed-76b7b90da6bc" />
+    <UnitTestResult executionId="dfce3783-b925-4d1e-b4be-8f38b80c53c2" testId="8737809d-3e5a-1230-ddf9-a589d7bd4323" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: 1, size: 0)" computerName="runnervm0hi8g" duration="00:00:00.0005227" startTime="2026-11-21T18:29:03.8857568+00:00" endTime="2026-11-21T18:29:03.8857569+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dfce3783-b925-4d1e-b4be-8f38b80c53c2" />
+    <UnitTestResult executionId="f1d8add8-27cd-4207-906a-3dc846f6de6e" testId="3800deac-8e7c-a185-b5d7-1dc772856e1b" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithPaginationFilter_AppliesSkipAndTakeCorrectly" computerName="runnervm0hi8g" duration="00:00:00.0129988" startTime="2026-11-21T18:29:03.8777659+00:00" endTime="2026-11-21T18:29:03.8777662+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1d8add8-27cd-4207-906a-3dc846f6de6e" />
+    <UnitTestResult executionId="423aacb7-6981-4bb2-891f-0ea2e4ce79bd" testId="9b585cc3-0719-ea0c-b2b5-588a5c9f4267" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithDuplicateSku_ThrowsDuplicatedEntityException" computerName="runnervm0hi8g" duration="00:00:00.0134946" startTime="2026-11-21T18:29:03.8649623+00:00" endTime="2026-11-21T18:29:03.8649624+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="423aacb7-6981-4bb2-891f-0ea2e4ce79bd" />
+    <UnitTestResult executionId="f9005d8e-0974-4bd8-87e6-220b9f4b09c4" testId="b4e3011e-78c9-1817-9ab4-7964d0792d23" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithInvalidQuantity_RejectsWithoutWrites(quantity: 0)" computerName="runnervm0hi8g" duration="00:00:00.0063736" startTime="2026-11-21T18:29:03.7874939+00:00" endTime="2026-11-21T18:29:03.7874941+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9005d8e-0974-4bd8-87e6-220b9f4b09c4" />
+    <UnitTestResult executionId="0eb8f950-3bba-4221-84b0-bef41cd417a9" testId="b925c63c-3ecc-4de3-154c-d1b16ceb895a" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: -1, price: 10)" computerName="runnervm0hi8g" duration="00:00:00.0031777" startTime="2026-11-21T18:29:03.8863082+00:00" endTime="2026-11-21T18:29:03.8863083+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0eb8f950-3bba-4221-84b0-bef41cd417a9" />
+    <UnitTestResult executionId="6e4dd39f-e0cc-4074-b376-4488626f48d0" testId="655b4179-e045-e415-e2a5-472ea6e56e0e" testName="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithMissingNameOrSku_DoesNotAccessRepository(sku: &quot;SKU&quot;, name: &quot; &quot;)" computerName="runnervm0hi8g" duration="00:00:00.1586044" startTime="2026-11-21T18:29:03.7199057+00:00" endTime="2026-11-21T18:29:03.7199376+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e4dd39f-e0cc-4074-b376-4488626f48d0" />
+    <UnitTestResult executionId="3582d61e-be07-498a-8503-69d1591e950f" testId="372d18ac-20a7-fa0e-b107-789405058207" testName="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: &quot;MOUSE&quot;, name: &quot;Monitor&quot;, sku: &quot;A&quot;, code: &quot;INT-Mouse&quot;)" computerName="runnervm0hi8g" duration="00:00:00.0026334" startTime="2026-11-21T18:29:03.8638495+00:00" endTime="2026-11-21T18:29:03.8638496+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3582d61e-be07-498a-8503-69d1591e950f" />
+    <UnitTestResult executionId="6192a4ad-a1ae-4279-bb9f-285aee8ce058" testId="493e75fb-8922-5d48-1f57-6979e6a5328e" testName="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenCustomerDoesNotExist_ThrowsCustomerNotFoundException" computerName="runnervm0hi8g" duration="00:00:00.0204816" startTime="2026-11-21T18:29:03.7696283+00:00" endTime="2026-11-21T18:29:03.7696284+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6192a4ad-a1ae-4279-bb9f-285aee8ce058" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: 1, size: 0)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="8737809d-3e5a-1230-ddf9-a589d7bd4323">
+      <Execution id="dfce3783-b925-4d1e-b4be-8f38b80c53c2" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithInvalidPagination_RejectsBeforeRepository" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithValidItemsAndStock_CalculatesTotalAndDecrementsProductStock" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="3be62401-f462-702c-2b1d-de428d8ee007">
+      <Execution id="6eb0f106-9a2c-42c1-a8f3-568eee2649ab" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WithValidItemsAndStock_CalculatesTotalAndDecrementsProductStock" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenCustomerDoesNotExist_ThrowsCustomerNotFoundException" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="493e75fb-8922-5d48-1f57-6979e6a5328e">
+      <Execution id="6192a4ad-a1ae-4279-bb9f-285aee8ce058" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WhenCustomerDoesNotExist_ThrowsCustomerNotFoundException" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithEmptyItems_RejectsBeforeRepository" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="ad2263ab-3cd2-0dd6-30e7-d7d6eee7e9ba">
+      <Execution id="19b9f0a0-915e-4931-9417-68712e604b65" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WithEmptyItems_RejectsBeforeRepository" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithInvalidQuantity_RejectsWithoutWrites(quantity: 0)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="b4e3011e-78c9-1817-9ab4-7964d0792d23">
+      <Execution id="f9005d8e-0974-4bd8-87e6-220b9f4b09c4" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WithInvalidQuantity_RejectsWithoutWrites" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithMissingNameOrSku_DoesNotAccessRepository(sku: &quot;&quot;, name: &quot;Mouse&quot;)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="cf0d94b0-b3b2-558e-2e33-9d60587a1cbe">
+      <Execution id="42776c83-6fc2-4564-8fbd-04d12451d9eb" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithMissingNameOrSku_DoesNotAccessRepository" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithValidData_ReturnsProductAndCallsRepositoryAdd" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="66c98b70-5b8d-4065-e1d8-74f8a357dffb">
+      <Execution id="8b72987c-e085-403a-bc40-451d967cb592" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithValidData_ReturnsProductAndCallsRepositoryAdd" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithZeroPrice_AcceptsBoundaryValue" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="f7b77ffe-7d83-7274-df23-871ddfcd45a6">
+      <Execution id="b3fde18b-d768-489e-8600-d2dbcb94e960" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithZeroPrice_AcceptsBoundaryValue" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 0, price: 10)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="9afdbb8f-cb66-8790-89ca-e6b0d329ee7b">
+      <Execution id="02cc74fe-fb05-401e-be24-1b0ea550edc1" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: &quot;mouse&quot;, name: &quot;Mouse Gamer&quot;, sku: &quot;A&quot;, code: &quot;X&quot;)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="a8cd0030-5359-f5b2-a337-7948a2376e40">
+      <Execution id="01e4390c-4f51-4b6f-aaf9-5fdff56b8e70" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenLaterItemHasInsufficientStock_DoesNotChangeEarlierProduct" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="3279d390-d19b-4143-2094-47b1da56c385">
+      <Execution id="7f1f0c4b-3233-49b1-b946-6207b589f19b" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WhenLaterItemHasInsufficientStock_DoesNotChangeEarlierProduct" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithDuplicateSku_ThrowsDuplicatedEntityException" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="9b585cc3-0719-ea0c-b2b5-588a5c9f4267">
+      <Execution id="423aacb7-6981-4bb2-891f-0ea2e4ce79bd" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithDuplicateSku_ThrowsDuplicatedEntityException" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WhenIncludeInactiveIsFalse_ReturnsOnlyActiveProducts" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="5f03d8ed-38ba-6590-cab4-056b6a02cc91">
+      <Execution id="62aeaa05-ec80-4d70-a5e7-e7258c8b9e5a" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WhenIncludeInactiveIsFalse_ReturnsOnlyActiveProducts" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithInvalidQuantity_RejectsWithoutWrites(quantity: -1)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="3d33c01a-f09b-c2e6-9ba5-b464feac3dcb">
+      <Execution id="3b1f72cf-a240-4cca-9f0d-879d458ad959" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WithInvalidQuantity_RejectsWithoutWrites" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithMissingNameOrSku_DoesNotAccessRepository(sku: &quot;SKU&quot;, name: &quot; &quot;)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="655b4179-e045-e415-e2a5-472ea6e56e0e">
+      <Execution id="6e4dd39f-e0cc-4074-b376-4488626f48d0" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithMissingNameOrSku_DoesNotAccessRepository" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: 0, size: 10)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="9c8f0429-6ac8-73b9-75dd-a6e723e3b263">
+      <Execution id="ec81c90f-b4fd-4b9b-926a-f0dd9baeb50a" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithInvalidPagination_RejectsBeforeRepository" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: &quot;MOUSE&quot;, name: &quot;Monitor&quot;, sku: &quot;A&quot;, code: &quot;INT-Mouse&quot;)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="372d18ac-20a7-fa0e-b107-789405058207">
+      <Execution id="3582d61e-be07-498a-8503-69d1591e950f" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenRepeatedProductExceedsCombinedStock_RejectsWithoutWrites" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="45df77c5-cf2d-3a71-af6e-17666d07673e">
+      <Execution id="e8e990de-cd66-4a5d-baed-76b7b90da6bc" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WhenRepeatedProductExceedsCombinedStock_RejectsWithoutWrites" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: -1, price: 10)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="b925c63c-3ecc-4de3-154c-d1b16ceb895a">
+      <Execution id="0eb8f950-3bba-4221-84b0-bef41cd417a9" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: -1, size: 10)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="dc5f52ca-41c1-1811-5971-39bd61c63219">
+      <Execution id="6b309753-9534-4228-a1d4-4add7ca75e7a" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithInvalidPagination_RejectsBeforeRepository" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenProductStockIsInsufficient_ThrowsInsufficientStockException" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="ce2f16ea-6e26-16a9-cb0e-ce11fc85a4d9">
+      <Execution id="e0b8f8dd-bde4-4e21-a75d-975aa99d8cb7" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.OrdersManagementServiceTests" name="CreateOrder_WhenProductStockIsInsufficient_ThrowsInsufficientStockException" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 10, price: -0.01)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="6737cd7e-5d9d-e6e7-508a-4ff1565d6236">
+      <Execution id="d540b51c-3477-415a-8835-63dc573aa599" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithPaginationFilter_AppliesSkipAndTakeCorrectly" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="3800deac-8e7c-a185-b5d7-1dc772856e1b">
+      <Execution id="f1d8add8-27cd-4207-906a-3dc846f6de6e" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithPaginationFilter_AppliesSkipAndTakeCorrectly" />
+    </UnitTest>
+    <UnitTest name="ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: &quot;MoUsE&quot;, name: &quot;Teclado&quot;, sku: &quot;SKU-MOUSE&quot;, code: &quot;X&quot;)" storage="/home/runner/work/ics2026-backend/ics2026-backend/tests/ecommerce.unittests/bin/release/net8.0/ecommerce.unittests.dll" id="d4a9992f-a26f-4b6f-9304-ba4f44d5bba8">
+      <Execution id="0c7ea5ed-ebed-48b0-93b1-dcfa1d980cd0" />
+      <TestMethod codeBase="/home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/bin/Release/net8.0/ECommerce.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ECommerce.UnitTests.ProductsManagementServiceTests" name="GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ad2263ab-3cd2-0dd6-30e7-d7d6eee7e9ba" executionId="19b9f0a0-915e-4931-9417-68712e604b65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9c8f0429-6ac8-73b9-75dd-a6e723e3b263" executionId="ec81c90f-b4fd-4b9b-926a-f0dd9baeb50a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc5f52ca-41c1-1811-5971-39bd61c63219" executionId="6b309753-9534-4228-a1d4-4add7ca75e7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7b77ffe-7d83-7274-df23-871ddfcd45a6" executionId="b3fde18b-d768-489e-8600-d2dbcb94e960" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66c98b70-5b8d-4065-e1d8-74f8a357dffb" executionId="8b72987c-e085-403a-bc40-451d967cb592" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6737cd7e-5d9d-e6e7-508a-4ff1565d6236" executionId="d540b51c-3477-415a-8835-63dc573aa599" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8cd0030-5359-f5b2-a337-7948a2376e40" executionId="01e4390c-4f51-4b6f-aaf9-5fdff56b8e70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3279d390-d19b-4143-2094-47b1da56c385" executionId="7f1f0c4b-3233-49b1-b946-6207b589f19b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce2f16ea-6e26-16a9-cb0e-ce11fc85a4d9" executionId="e0b8f8dd-bde4-4e21-a75d-975aa99d8cb7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d33c01a-f09b-c2e6-9ba5-b464feac3dcb" executionId="3b1f72cf-a240-4cca-9f0d-879d458ad959" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f03d8ed-38ba-6590-cab4-056b6a02cc91" executionId="62aeaa05-ec80-4d70-a5e7-e7258c8b9e5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4a9992f-a26f-4b6f-9304-ba4f44d5bba8" executionId="0c7ea5ed-ebed-48b0-93b1-dcfa1d980cd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cf0d94b0-b3b2-558e-2e33-9d60587a1cbe" executionId="42776c83-6fc2-4564-8fbd-04d12451d9eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9afdbb8f-cb66-8790-89ca-e6b0d329ee7b" executionId="02cc74fe-fb05-401e-be24-1b0ea550edc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3be62401-f462-702c-2b1d-de428d8ee007" executionId="6eb0f106-9a2c-42c1-a8f3-568eee2649ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45df77c5-cf2d-3a71-af6e-17666d07673e" executionId="e8e990de-cd66-4a5d-baed-76b7b90da6bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8737809d-3e5a-1230-ddf9-a589d7bd4323" executionId="dfce3783-b925-4d1e-b4be-8f38b80c53c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3800deac-8e7c-a185-b5d7-1dc772856e1b" executionId="f1d8add8-27cd-4207-906a-3dc846f6de6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b585cc3-0719-ea0c-b2b5-588a5c9f4267" executionId="423aacb7-6981-4bb2-891f-0ea2e4ce79bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4e3011e-78c9-1817-9ab4-7964d0792d23" executionId="f9005d8e-0974-4bd8-87e6-220b9f4b09c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b925c63c-3ecc-4de3-154c-d1b16ceb895a" executionId="0eb8f950-3bba-4221-84b0-bef41cd417a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="655b4179-e045-e415-e2a5-472ea6e56e0e" executionId="6e4dd39f-e0cc-4074-b376-4488626f48d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="372d18ac-20a7-fa0e-b107-789405058207" executionId="3582d61e-be07-498a-8503-69d1591e950f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="493e75fb-8922-5d48-1f57-6979e6a5328e" executionId="6192a4ad-a1ae-4279-bb9f-285aee8ce058" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="24" executed="24" passed="23" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.34)
+[xUnit.net 00:00:00.13]   Discovering: ECommerce.UnitTests
+[xUnit.net 00:00:00.21]   Discovered:  ECommerce.UnitTests
+[xUnit.net 00:00:00.21]   Starting:    ECommerce.UnitTests
+[xUnit.net 00:00:00.76]       Expected a &lt;System.IO.InvalidDataException&gt; to be thrown, but found &lt;Moq.MockException&gt;:
+[xUnit.net 00:00:00.76]       Moq.MockException: IRepository.First&lt;Product&gt;(p =&gt; (p.Sku.Trim() == value(Dsw2025Tpi.Application.Services.ProductsManagementService+&lt;&gt;c__DisplayClass3_0).request.Sku.Trim()), []) invocation failed with mock behavior Strict.&#xD;
+[xUnit.net 00:00:00.76]       All invocations on the mock must have a corresponding setup.
+[xUnit.net 00:00:00.76]          at Moq.FailForStrictMock.Handle(Invocation invocation, Mock mock) in /_/src/Moq/Interception/InterceptionAspects.cs:line 182
+[xUnit.net 00:00:00.76]          at Moq.Mock.Moq.IInterceptor.Intercept(Invocation invocation) in /_/src/Moq/Interception/Mock.cs:line 27
+[xUnit.net 00:00:00.76]          at Moq.CastleProxyFactory.Interceptor.Intercept(IInvocation underlying) in /_/src/Moq/Interception/CastleProxyFactory.cs:line 107
+[xUnit.net 00:00:00.76]          at Castle.DynamicProxy.AbstractInvocation.Proceed()
+[xUnit.net 00:00:00.76]          at Castle.Proxies.IRepositoryProxy.First[T](Expression`1 predicate, String[] include)
+[xUnit.net 00:00:00.76]          at Dsw2025Tpi.Application.Services.ProductsManagementService.AddProduct(Request request) in /home/runner/work/ICS2026-backend/ICS2026-backend/Dsw2025Tpi.Application/Services/ProductsManagementService.cs:line 40
+[xUnit.net 00:00:00.76]          at FluentAssertions.Specialized.AsyncFunctionAssertions`2.InvokeWithInterceptionAsync(Func`1 action).
+[xUnit.net 00:00:00.76]       Stack Trace:
+[xUnit.net 00:00:00.76]            at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Specialized.DelegateAssertionsBase`2.ThrowInternal[TException](Exception exception, String because, Object[] becauseArgs)
+[xUnit.net 00:00:00.76]            at FluentAssertions.Specialized.AsyncFunctionAssertions`2.ThrowAsync[TException](String because, Object[] becauseArgs)
+[xUnit.net 00:00:00.76]         /home/runner/work/ICS2026-backend/ICS2026-backend/tests/ECommerce.UnitTests/ProductsManagementServiceTests.cs(59,0): at ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(Int32 stock, Decimal price)
+[xUnit.net 00:00:00.76]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:00.77]   Finished:    ECommerce.UnitTests
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="runnervm0hi8g" outcome="Error" timestamp="2026-11-21T18:29:04.0151585+00:00">
+        <Text>[xUnit.net 00:00:00.76]     ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 0, price: 10) [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+    <CollectorDataEntries>
+      <Collector agentName="runnervm0hi8g" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="runnervm0hi8g/coverage.cobertura.xml"></A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+  </ResultSummary>
+</TestRun>

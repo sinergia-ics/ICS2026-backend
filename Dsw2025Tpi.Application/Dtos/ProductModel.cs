@@ -26,7 +26,11 @@
         public record ResponsePagination(
             List<ResponseProduct> ProductItems, 
             int Total
-        );
+        )
+        {
+            /// <summary>Total filtrado previo a paginar; conserva Total para el frontend existente.</summary>
+            public int TotalItems => Total;
+        }
 
         public record FilterProduct(
             string? Status,
