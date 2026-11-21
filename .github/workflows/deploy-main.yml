@@ -2,7 +2,7 @@ name: CI/CD - Tests, Docker and Azure
 
 on:
   push:
-    branches: [development, main, 'feature/tp4-*']
+    branches: [development, main, 'test/**', 'feature/tp4-*']
   pull_request:
     branches: [development, main]
   workflow_dispatch:
