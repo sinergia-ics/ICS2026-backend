@@ -1,3 +1,7 @@
+# TP4 Testing automatizado y CI/CD
+
+La resolución y las instrucciones de ejecución están en [docs/tp4/README.md](docs/tp4/README.md). Incluye 39 pruebas, evidencias de GitHub Actions y el informe Word.
+
 # Trabajo Práctico Integrador
 ## Desarrollo de Software
 ### Backend

@@ -146,6 +146,7 @@ _TeamCity*
 coverage*.json
 coverage*.xml
 coverage*.info
+!docs/tp4/evidencias/**/coverage.cobertura.xml
 
 # Visual Studio code coverage results
 *.coverage

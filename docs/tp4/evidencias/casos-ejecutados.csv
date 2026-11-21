@@ -1,0 +1,40 @@
+﻿Nivel,Caso,Resultado,Duración
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: 0, size: 10)",Passed,00:00:00.0005633
+Unitarias,ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithValidData_ReturnsProductAndCallsRepositoryAdd,Passed,00:00:00.0468489
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: ""MoUsE"", name: ""Teclado"", sku: ""SKU-MOUSE"", code: ""X"")",Passed,00:00:00.0019685
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: 1, size: 0)",Passed,00:00:00.0003420
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithInvalidQuantity_RejectsWithoutWrites(quantity: 0),Passed,00:00:00.0033399
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: ""MOUSE"", name: ""Monitor"", sku: ""A"", code: ""INT-Mouse"")",Passed,00:00:00.0027558
+Unitarias,ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithZeroPrice_AcceptsBoundaryValue,Passed,00:00:00.0015464
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenProductStockIsInsufficient_ThrowsInsufficientStockException,Passed,00:00:00.0045153
+Unitarias,ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithDuplicateSku_ThrowsDuplicatedEntityException,Passed,00:00:00.0111200
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithValidItemsAndStock_CalculatesTotalAndDecrementsProductStock,Passed,00:00:00.0225075
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 0, price: 10)",Passed,00:00:00.0005676
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithInvalidPagination_RejectsBeforeRepository(page: -1, size: 10)",Passed,00:00:00.0013251
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenCustomerDoesNotExist_ThrowsCustomerNotFoundException,Passed,00:00:00.0041820
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithMissingNameOrSku_DoesNotAccessRepository(sku: """", name: ""Mouse"")",Passed,00:00:00.0008281
+Unitarias,ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WhenIncludeInactiveIsFalse_ReturnsOnlyActiveProducts,Passed,00:00:00.0026269
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithSearchTerm_FiltersByNameSkuOrInternalCode(search: ""mouse"", name: ""Mouse Gamer"", sku: ""A"", code: ""X"")",Passed,00:00:00.0269747
+Unitarias,ECommerce.UnitTests.ProductsManagementServiceTests.GetProducts_WithPaginationFilter_AppliesSkipAndTakeCorrectly,Passed,00:00:00.0110909
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithMissingNameOrSku_DoesNotAccessRepository(sku: ""SKU"", name: "" "")",Passed,00:00:00.0879193
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenRepeatedProductExceedsCombinedStock_RejectsWithoutWrites,Passed,00:00:00.1014898
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithInvalidQuantity_RejectsWithoutWrites(quantity: -1),Passed,00:00:00.0023731
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: 10, price: -0.01)",Passed,00:00:00.0003115
+Unitarias,"ECommerce.UnitTests.ProductsManagementServiceTests.AddProduct_WithInvalidStockOrPrice_ThrowsInvalidDataException(stock: -1, price: 10)",Passed,00:00:00.0018046
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WithEmptyItems_RejectsBeforeRepository,Passed,00:00:00.0013997
+Unitarias,ECommerce.UnitTests.OrdersManagementServiceTests.CreateOrder_WhenLaterItemHasInsufficientStock_DoesNotChangeEarlierProduct,Passed,00:00:00.0071451
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenUnauthenticated_ReturnsUnauthorized,Passed,00:00:00.0042242
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.GetProducts_PublicEndpoint_ReturnsOkWithPaginatedJsonStructure,Passed,00:00:00.0091586
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenAuthenticatedWithValidData_ReturnsCreatedAndPersistsOrderAndStockInSqlite,Passed,00:00:00.1553344
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenLaterItemFails_DoesNotPersistPartialStockChanges,Passed,00:00:00.1227061
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.GetProducts_WhenDatabaseIsEmpty_ReturnsNoContent,Passed,00:00:00.0173676
+Integración y E2E API,"ECommerce.IntegrationTests.ApiTests.AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden(username: ""user"", expected: Forbidden)",Passed,00:00:00.1087366
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.E2E_LoginCreateProductPurchaseAndReadOrder_PreservesInventoryAndTotals,Passed,00:00:00.4668780
+Integración y E2E API,"ECommerce.IntegrationTests.ApiTests.AddProduct_WhenUnauthenticatedOrNotAdmin_ReturnsUnauthorizedOrForbidden(username: null, expected: Unauthorized)",Passed,00:00:00.0097106
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.AddProduct_WhenAuthenticatedAsAdmin_PersistsInSqliteAndReturnsCreated,Passed,00:00:00.2190945
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.Repository_WhenOrderInsertFails_RollsBackPreviouslySavedStock,Passed,00:00:00.0434022
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.GetAuthProducts_AdminEndpoint_WhenCalledByAdmin_IncludesInactiveProducts,Passed,00:00:00.1740056
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.AddProduct_WhenSkuAlreadyExistsInDatabase_ReturnsConflictStatusCode,Passed,00:00:00.2809863
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.ProtectedEndpoint_WithTamperedJwt_ReturnsUnauthorized,Passed,00:00:00.5883769
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.CreateOrder_WhenStockIsInsufficient_ReturnsBadRequestWithErrorMessage,Passed,00:00:00.1921188
+Integración y E2E API,ECommerce.IntegrationTests.ApiTests.GetProducts_WithQueryStringFilters_ReturnsFilteredResultsFromSqlite,Passed,00:00:00.1742387
