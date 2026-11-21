@@ -43,10 +43,12 @@ y rollback real en SQLite ante una violación de clave foránea al insertar una 
 | --- | --- |
 | [CARD-TP4-01](https://trello.com/c/6XPQuppJ) | Dos proyectos en tests/, referencias, paquetes, solución y fábrica SQLite |
 | [CARD-TP4-02](https://trello.com/c/RzmRynX7) | UT01 a UT09, patrón AAA, Moq con Verify y escenarios negativos |
-| [CARD-TP4-03](https://trello.com/c/yQOXqp2u) | IT01 a IT09, JWT real, SQLite, aislamiento y E2E01 |
-| [CARD-TP4-04](https://trello.com/c/R3YprlAA) | CI01 y CI02, ejecución positiva y negativa con logs preservados |
+| [CARD-TP4-03](https://trello.com/c/yQOXqp2u) | Integración A: JWT real, SQLite, aislamiento e IT01 a IT03 de productos |
+| [CARD-TP4-04](https://trello.com/c/Hnsn9hWv) | Integración B: IT04 a IT09 de órdenes y catálogo, más E2E01 |
+| [CARD-TP4-05](https://trello.com/c/R3YprlAA) | CI01 y CI02, ejecución positiva y negativa con logs y capturas reales |
+| [CARD-TP4-06](https://trello.com/c/xsMT1zEJ) | Informe Word, matriz de requisitos, evidencias y capturas; historial de Trello a cargo del equipo |
 
-La tarjeta 03 menciona `totalItems`; el código previo devolvía `total`. Se agrega `totalItems`
+El requisito de catálogo menciona `totalItems`; el código previo devolvía `total`. Se agrega `totalItems`
 como alias de lectura y se conserva `total` para no romper el frontend existente.
 El enunciado acepta 409 o 400 ante SKU duplicado: se verifica el 400 del middleware actual.
 La guía ofrece xUnit; se prioriza esa consigna frente a la recomendación genérica de MSTest.

@@ -10,7 +10,7 @@ Se parte de `origin/development` en `b0ac7fb`. Rama de entrega: `test/tp4-testin
 
 - [Informe técnico completo](informe.md) y `resolucion-tp4.docx`.
 - [Matriz de trazabilidad](matriz-requisitos.md).
-- [Evidencias verificables](evidencias/README.md): TRX locales, resultados y registros de GitHub Actions.
+- [Evidencias verificables](evidencias/README.md): cinco capturas reales de GitHub Actions, TRX, resultados y registros.
 - `tests/ECommerce.UnitTests`: 24 ejecuciones unitarias, xUnit, Moq y FluentAssertions.
 - `tests/ECommerce.IntegrationTests`: 15 ejecuciones de integración/E2E, API real, JWT y SQLite.
 - `.github/workflows/deploy-main.yml`: pruebas obligatorias antes de Docker y Azure.

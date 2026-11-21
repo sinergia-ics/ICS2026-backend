@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import shutil
@@ -158,6 +159,13 @@ def table(document, rows: list[list[str]]):
 
 
 def build_document():
+    # Screenshots are evidence: validate the original files before embedding them.
+    capture_root = EVIDENCE / "capturas"
+    manifest = json.loads((capture_root / "manifest.json").read_text(encoding="utf-8"))
+    for capture in manifest:
+        original = capture_root / capture["archivo"]
+        if hashlib.sha256(original.read_bytes()).hexdigest() != capture["sha256"]:
+            raise ValueError(f"Screenshot differs from capture manifest: {original}")
     document = Document()
     section = document.sections[0]
     section.page_width, section.page_height = Inches(8.5), Inches(11)

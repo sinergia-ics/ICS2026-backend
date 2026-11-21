@@ -1,0 +1,57 @@
+[
+  {
+    "archivo": "01-ci-exitosa.png",
+    "url": "https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935540151",
+    "captura_utc": "2026-11-21T18:47:54.322050+00:00",
+    "dimensiones": [
+      960,
+      1073
+    ],
+    "sha256": "4862e8baf6743829a9dccd3a486cd6bfa0117080cf31c1abfe1ddbe6e76a4193",
+    "metodo": "Captura nativa de la ventana de Zen mediante cua.getScreenshot; sin modificar los pixeles."
+  },
+  {
+    "archivo": "02-tests-aprobados.png",
+    "url": "https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935540151/job/136941211390",
+    "captura_utc": "2026-11-21T18:49:11.239460+00:00",
+    "dimensiones": [
+      960,
+      1073
+    ],
+    "sha256": "3485b13b251fd3818d4315ca3a9bd98f1e51907a13b3e61c1acb65ac7a50ccfe",
+    "metodo": "Captura nativa de la ventana de Zen mediante cua.getScreenshot; sin modificar los pixeles."
+  },
+  {
+    "archivo": "03-despliegue-bloqueado.png",
+    "url": "https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155",
+    "captura_utc": "2026-11-21T18:49:33.583736+00:00",
+    "dimensiones": [
+      960,
+      1073
+    ],
+    "sha256": "f3afabe9c17c85e4ed7a02eac945c10cebb8603af39d2c810f34f5f9641cd66a",
+    "metodo": "Captura nativa de la ventana de Zen mediante cua.getScreenshot; sin modificar los pixeles."
+  },
+  {
+    "archivo": "04-test-fallido-y-exit-code.png",
+    "url": "https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155/job/136941745046",
+    "captura_utc": "2026-11-21T18:50:09.989409+00:00",
+    "dimensiones": [
+      960,
+      1073
+    ],
+    "sha256": "1efcf4978eaff02a26bc5ee84500dae60e770830151d88af604ab92bfc38bc36",
+    "metodo": "Captura nativa de la ventana de Zen mediante cua.getScreenshot; sin modificar los pixeles."
+  },
+  {
+    "archivo": "05-causa-stock-cero.png",
+    "url": "https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155/job/136941745046",
+    "captura_utc": "2026-11-21T18:50:30.009786+00:00",
+    "dimensiones": [
+      960,
+      1073
+    ],
+    "sha256": "099fa4db7c234da9ca8f7ab3412e2e7d8920e451102cec58d5ffd1fbf71ff4ab",
+    "metodo": "Captura nativa de la ventana de Zen mediante cua.getScreenshot; sin modificar los pixeles."
+  }
+]

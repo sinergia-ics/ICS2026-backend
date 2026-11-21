@@ -12,7 +12,7 @@ Fecha de validación 21 de noviembre de 2026
 
 El backend cuenta con 39 pruebas automatizadas aprobadas: 24 unitarias y 15 de integración y E2E a nivel de API. Se incorporaron los dos proyectos de pruebas a la solución y se actualizó GitHub Actions para exigir su aprobación antes de construir Docker o desplegar en Azure.
 
-La verificación incluyó una ejecución exitosa en GitHub y una ejecución negativa controlada. En esta última falló una prueba real de validación de stock y el job dependiente de construcción y despliegue quedó omitido. Los registros originales, los resultados TRX y las visualizaciones de evidencia acompañan este informe.
+La verificación incluyó una ejecución exitosa en GitHub y una ejecución negativa controlada. En esta última falló una prueba real de validación de stock y el job dependiente de construcción y despliegue quedó omitido. Los registros originales, los resultados TRX y cinco capturas reales de GitHub Actions acompañan este informe.
 
 La entrega se encuentra en la rama test/tp4-testing-documentacion del repositorio ICS2026-backend, siguiendo el formato test/{tarea_realizada} exigido. El desarrollo parte del commit b0ac7fb de development. El frontend está fuera del alcance de los dos documentos de consigna.
 
@@ -151,37 +151,53 @@ La demostración es reproducible y deja artefactos con el fallo. En las ejecucio
 
 <!-- pagebreak -->
 
-## Evidencia de ejecución exitosa
+## Captura de la ejecución exitosa
 
-La validación local final se realizó con SDK 8.0.428 y runtime .NET 8.0.34. El resultado fue 24 de 24 unitarias y 15 de 15 de integración/E2E, sin fallos ni omisiones. Los TRX conservan el resultado individual de cada caso y el registro de consola conserva las salidas de ejecución.
+GitHub Actions muestra Success y ambos jobs aprobados para el commit 126f28d. La ejecución corresponde a la rama inicial feature/tp4-testing-documentacion; la rama final de entrega es test/tp4-testing-documentacion. Docker se construyó; Azure se omitió por la política de ramas.
 
-![Resultados locales exportados de los archivos TRX](evidencias/resultados-locales.png)
+![Captura real de GitHub Actions con ambos jobs aprobados](evidencias/capturas/01-ci-exitosa.png)
 
-Figura 1. Visualización generada a partir de los TRX originales incluidos en evidencias. Las imágenes de este informe representan registros verificables; no se presentan como capturas de una interfaz web.
-
-La ejecución 44935540151 de GitHub Actions aprobó el quality gate y construyó la imagen Docker en Ubuntu. La publicación y Azure se omitieron por la política de ramas en la rama inicial feature/tp4-testing-documentacion. La entrega final usa test/tp4-testing-documentacion. La evidencia prueba construcción de imagen; no se realizó un despliegue productivo.
-
-![Resultado exitoso exportado de GitHub Actions](evidencias/ci-exitosa.png)
-
-Figura 2. Estados y pasos obtenidos de la API de GitHub; el JSON y el log completos acompañan la entrega.
-
-Ejecución verificable: [GitHub Actions 44935540151](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935540151).
+Figura 1. Captura original de Zen. [Ejecución 44935540151](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935540151).
 
 <!-- pagebreak -->
 
-## Evidencia del despliegue bloqueado
+## Captura de las pruebas aprobadas
 
-La ejecución manual 44935709155 utilizó demonstrate_failure=true sobre la misma rama. La restauración y la compilación aprobaron. El step Ejecutar todas las pruebas falló al detectar que se aceptaba stock cero. GitHub clasificó run-tests como failure y Construir imagen y desplegar como skipped, sin ejecutar pasos del segundo job.
+La salida real de dotnet test muestra 24 pruebas unitarias aprobadas y 15 de integración/E2E aprobadas. No hay fallos ni casos omitidos. Los resultados originales TRX acompañan esta captura.
 
-![Bloqueo real exportado de GitHub Actions](evidencias/ci-bloqueada.png)
+![Captura real del log con 24 unitarias y 15 de integración aprobadas](evidencias/capturas/02-tests-aprobados.png)
 
-Figura 3. El estado skipped del job dependiente procede del JSON de la ejecución, no de una simulación del pipeline.
+Figura 2. Captura original del step de pruebas. [Log del job](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935540151/job/136941211390).
 
-Esta prueba distingue un fallo real de test de un error de compilación o de credenciales. Los resultados fallidos se conservaron como artefactos aun cuando la ejecución general terminó en failure. El repositorio conserva la validación correcta de stock menor o igual a cero.
+<!-- pagebreak -->
 
-Los archivos ci-bloqueada.json, ci-bloqueada.txt y los TRX remotos permiten comprobar la causa del fallo y la ausencia de ejecución de Docker/Azure. La política normal de publicación por ramas no sustituye a needs: el job completo quedó omitido antes de evaluar sus steps.
+## Captura del despliegue bloqueado
 
-Ejecución verificable: [GitHub Actions 44935709155](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155).
+La demostración manual inyectó una regresión sólo en el runner. La interfaz muestra Failure, el quality gate fallido y Construir imagen y desplegar omitido, con duración cero. El resumen confirma el bloqueo por needs.
+
+![Captura real del quality gate fallido y del job de despliegue omitido](evidencias/capturas/03-despliegue-bloqueado.png)
+
+Figura 3. Captura original del bloqueo. [Ejecución 44935709155](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155).
+
+<!-- pagebreak -->
+
+## Captura del código de salida
+
+El log confirma una prueba unitaria fallida, 23 aprobadas y Process completed with exit code 1. Las 15 pruebas de integración pasan. El job dependiente no se ejecuta debido al fallo de la suite.
+
+![Captura real del test fallido y del código de salida 1](evidencias/capturas/04-test-fallido-y-exit-code.png)
+
+Figura 4. Captura original del resultado negativo. [Log del job](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155/job/136941745046).
+
+<!-- pagebreak -->
+
+## Captura de la regresión de stock
+
+El caso con stock cero esperaba InvalidDataException antes de consultar persistencia. La mutación permite avanzar al repositorio y el mock estricto detecta la llamada inesperada. La captura muestra el caso, stock 0 y la aserción fallida. La rama conserva la validación correcta.
+
+![Captura real del caso de stock cero y de la aserción fallida](evidencias/capturas/05-causa-stock-cero.png)
+
+Figura 5. Captura original de la causa del fallo. [Log del job](https://github.com/sinergia-ics/ICS2026-backend/actions/runs/44935709155/job/136941745046).
 
 <!-- pagebreak -->
 
@@ -209,7 +225,7 @@ Los archivos TRX locales contienen nombres, datos parametrizados, duración y re
 
 ### Gestión de las tarjetas
 
-Las cuatro tarjetas existentes se relacionan con la entrega en matriz-requisitos.md. CARD-TP4-01 corresponde a infraestructura; CARD-TP4-02 a unitarias; CARD-TP4-03 a integración y E2E; CARD-TP4-04 al workflow y a la demostración del bloqueo.
+Las seis tarjetas actuales se relacionan con la entrega en matriz-requisitos.md. CARD-TP4-01 corresponde a infraestructura; CARD-TP4-02 a unitarias; CARD-TP4-03 a integración de productos; CARD-TP4-04 a integración de órdenes, catálogo y E2E; CARD-TP4-05 al quality gate; CARD-TP4-06 a documentación.
 
 Los movimientos de listas, la revisión del equipo y el cierre en Done quedan a cargo del equipo por decisión del solicitante. No se modifica ni se fabrica historial de Trello. La rama publicada conserva todos los cambios para su revisión antes de integrar a development.
 
@@ -237,4 +253,4 @@ guia-tp4-testing-dotnet-cicd.pdf. Guía de implementación TP4, versión 3. UTN 
 
 [Repositorio del backend](https://github.com/sinergia-ics/ICS2026-backend). Rama de entrega test/tp4-testing-documentacion.
 
-[Tablero TP4](https://trello.com/b/BPuStRHF). Tarjetas CARD-TP4-01 a CARD-TP4-04.
+[Tablero TP4](https://trello.com/b/BPuStRHF). Tarjetas CARD-TP4-01 a CARD-TP4-06.
