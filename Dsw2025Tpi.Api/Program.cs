@@ -28,7 +28,7 @@ public class Program
             ?? throw new InvalidOperationException(
                 "No se configuró la connection string. Definí la app setting 'DB_CONNECTION_STRING' o 'ConnectionStrings__Dsw2025TpiEntities'.");
 
-        if (!OperatingSystem.IsWindows() && connectionString.Contains("(localdb)", StringComparison.OrdinalIgnoreCase))
+        if (!builder.Environment.IsEnvironment("Testing") && !OperatingSystem.IsWindows() && connectionString.Contains("(localdb)", StringComparison.OrdinalIgnoreCase))
         {
             throw new InvalidOperationException(
                 "La connection string apunta a LocalDB, que no está disponible en este sistema. " +
@@ -114,17 +114,21 @@ public class Program
         .AddErrorDescriber<SpanishIdentityErrorDescriber>(); 
 
 
-        var jwtConfig = builder.Configuration.GetSection("Jwt");
-        var keyText = jwtConfig["Key"] ?? throw new ArgumentNullException("JWT Key");
-        var key = Encoding.UTF8.GetBytes(keyText);
-
         builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
         })
-            .AddJwtBearer(options =>
+            .AddJwtBearer();
+
+        // Resolver configuración al construir las opciones: emisión y validación usan
+        // los mismos valores, incluso cuando el host de pruebas los reemplaza.
+        builder.Services.AddOptions<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme)
+            .Configure<IConfiguration>((options, configuration) =>
             {
+                var jwtConfig = configuration.GetSection("Jwt");
+                var keyText = jwtConfig["Key"] ?? throw new ArgumentNullException("JWT Key");
+                var key = Encoding.UTF8.GetBytes(keyText);
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
@@ -165,6 +169,7 @@ public class Program
         var app = builder.Build();
 
         //para crear los roles y cargar los administradores desde el archivo JSON
+        if (!app.Environment.IsEnvironment("Testing"))
         using (var scope = app.Services.CreateScope())
         {
             var services = scope.ServiceProvider;

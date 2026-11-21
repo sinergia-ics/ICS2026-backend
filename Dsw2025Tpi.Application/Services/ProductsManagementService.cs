@@ -90,6 +90,9 @@ namespace Dsw2025Tpi.Application.Services
 
         public async Task<ProductModel.ResponsePagination> GetProducts(ProductModel.FilterProduct filter, bool includeInactive = false)
         {
+            if (filter.PageNumber is <= 0 || filter.PageSize is <= 0)
+                throw new InvalidDataException("La página y el tamaño deben ser mayores a cero.");
+            var search = filter.Search?.ToLower();
             _logger.LogInformation("Consulta de productos. IncludeInactive: {IncludeInactive}, StatusFilter: {Status}", includeInactive, filter.Status);
 
             
@@ -111,10 +114,10 @@ namespace Dsw2025Tpi.Application.Services
                 &&
 
                 
-                (string.IsNullOrEmpty(filter.Search)
-                    || (p.Name != null && p.Name.Contains(filter.Search))
-                    || (p.InternalCode != null && p.InternalCode.Contains(filter.Search))
-                    || (p.Sku != null && p.Sku.Contains(filter.Search))
+                (string.IsNullOrEmpty(search)
+                    || (p.Name != null && p.Name.ToLower().Contains(search))
+                    || (p.InternalCode != null && p.InternalCode.ToLower().Contains(search))
+                    || (p.Sku != null && p.Sku.ToLower().Contains(search))
                 )
             );
 
@@ -128,6 +131,7 @@ namespace Dsw2025Tpi.Application.Services
 
             var products = filteredProducts
                 .OrderBy(p => p.Name)
+                .ThenBy(p => p.Id)
                 .Skip((page - 1) * size)
                 .Take(size)
                 .Select(p => new ProductModel.ResponseProduct(
